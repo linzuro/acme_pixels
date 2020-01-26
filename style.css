@@ -51,23 +51,24 @@ input,button{
 
 td{
     border: 1px black solid;
-    width: 50%;
     height: 7vh;
+    width:50%;
     display: flex;
-    flex-wrap: wrap;
-    
-
+    margin:0px;
 }
 
 
 tr{
-    display: flex;
-    
+    display: flex; 
 }
 
 table{
-    width: 75%;
-    height: 25%;
+   height:75%;
+   width:100%;
+   align-items:center;
+}
+.colorblock.selected{
+    border-color:white;
 }
 
 
