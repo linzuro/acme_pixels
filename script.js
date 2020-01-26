@@ -24,8 +24,25 @@ colors.forEach((elem)=>{
 })
 let button = document.querySelector('button');
 button.addEventListener('click',(ev)=>{
-    let rowInput=document.querySelector('[name="row"]').value
-    let columnInput=document.querySelector('[name="column"]').value
+    let rowInput=parseInt(document.querySelector('[name="row"]').value)
+    let columnInput=parseInt(document.querySelector('[name="column"]').value)
+    let table = document.querySelector('table')
     ev.preventDefault();
-    console.log(rowInput,columnInput)
+    for (let i = 0; i < rowInput; i++){
+        table.innerHTML += '<tr>'
+        console.log(table.innerHTML)
+
+        for (let j = 0; j < columnInput; j++){
+            table.innerHTML += '<td></td>'     
+
+        }
+        table.innerHTML += '</tr>'
+    }
+
+    
+
 })
+
+let colSize = document.querySelectorAll('td').length / document.querySelectorAll('tr').length
+
+let rowSize = document.querySelectorAll('tr').length
